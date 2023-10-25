@@ -1,0 +1,84 @@
+
+1
+<?xml version="1.0" encoding="UTF-8" ?>
+2
+<!DOCTYPE html>
+3
+<html b:css='false' b:defaultwidgetversion='2' b:layoutsVersion='3' b:responsive='true' b:templateUrl='rockpool.xml' b:templateVersion='1.3.3' expr:dir='data:blog.languageDirection' expr:lang='data:blog.locale' xmlns='http://www.w3.org/1999/xhtml' xmlns:b='http://www.google.com/2005/gml/b' xmlns:data='http://www.google.com/2005/gml/data' xmlns:expr='http://www.google.com/2005/gml/expr'>
+4
+  <head>
+5
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+6
+    <title><data:view.title.escaped/></title>
+7
+    <b:include data='blog' name='all-head-content'/>
+8
+​
+9
+    <b:skin version='1.3.3'><![CDATA[/*! normalize.css v3.0.1 | MIT License | git.io/normalize */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:1px dotted}b,strong{font-weight:bold}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-0.5em}sub{bottom:-0.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type="button"],input[type="reset"],input[type="submit"]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type="checkbox"],input[type="radio"]{box-sizing:border-box;padding:0}input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button{height:auto}input[type="search"]{-webkit-appearance:textfield;-moz-box-sizing:content-box;-webkit-box-sizing:content-box;box-sizing:content-box}input[type="search"]::-webkit-search-cancel-button,input[type="search"]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid #c0c0c0;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:bold}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}
+10
+/*
+11
+<!-- Constants -->
+12
+​
+13
+<Variable name="loraNormal20" description="Item body font" type="font" default="400 20px Lora, serif" hideEditor="true"  value="400 20px Lora, serif"/>
+14
+<Variable name="openSansNormal14" description="Small-size normal-weight font (eg: labels, subscribe popup email)" type="font" default="400 14px Open Sans, sans-serif" hideEditor="true"  value="400 14px Open Sans, sans-serif"/>
+15
+<Variable name="openSansNormal16" description="Medium-size normal-weight font (eg: sidebar titles)" type="font" default="400 16px Open Sans, sans-serif" hideEditor="true"  value="400 16px Open Sans, sans-serif"/>
+16
+<Variable name="openSansNormal20" description="Item body font, OpenSans" type="font" default="400 20px Open Sans, serif" hideEditor="true"  value="400 20px Open Sans, serif"/>
+17
+<Variable name="openSansSemibold14" description="Button font" type="font" default="600 14px Open Sans, sans-serif" hideEditor="true"  value="600 14px Open Sans, sans-serif"/>
+18
+<Variable name="openSansSemiboldItalic36" description="Open Sans semibold italic 36" type="font" default="italic 600 36px Open Sans, sans-serif" hideEditor="true"  value="italic 600 36px Open Sans, sans-serif"/>
+19
+<Variable name="openSansSemiboldItalic44" description="Blockquote font, Open Sans" type="font" default="italic 600 44px Open Sans, sans-serif" hideEditor="true"  value="italic 600 44px Open Sans, sans-serif"/>
+20
+<Variable name="openSansSemibold16" description="Subtitle font (eg: author attribution)" type="font" default="600 16px Open Sans, sans-serif" hideEditor="true"  value="600 16px Open Sans, sans-serif"/>
+21
+<Variable name="openSansSemibold48" description="Open Sans semibold 48" type="font" default="600 48px Open Sans, sans-serif" hideEditor="true"  value="600 48px Open Sans, sans-serif"/>
+22
+<Variable name="openSansBold16" description="Main blog title font" type="font" default="700 16px Open Sans, sans-serif" hideEditor="true"  value="700 16px Open Sans, sans-serif"/>
+23
+<Variable name="openSansBold24" description="Medium-size bold font (eg: subscribe popup title)" type="font" default="700 24px Open Sans, sans-serif" hideEditor="true"  value="700 24px Open Sans, sans-serif"/>
+24
+<Variable name="openSansBold36" description="Title font (eg: regular post title)" type="font" default="700 36px Open Sans, sans-serif" hideEditor="true"  value="700 36px Open Sans, sans-serif"/>
+25
+<Variable name="openSansExtraboldItalic24" description="Open Sans Extrabold italic 24" type="font" default="italic 800 24px Open Sans, sans-serif" hideEditor="true"  value="italic 800 24px Open Sans, sans-serif"/>
+26
+<Variable name="openSansExtraboldItalic40" description="Open Sans Extrabold italic 40" type="font" default="italic 800 40px Open Sans, sans-serif" hideEditor="true"  value="italic 800 40px Open Sans, sans-serif"/>
+27
+<Variable name="openSansExtraboldItalic48" description="Open Sans Extrabold italic 48" type="font" default="italic 800 48px Open Sans, sans-serif" hideEditor="true"  value="italic 800 48px Open Sans, sans-serif"/>
+28
+<Variable name="ebGaramondNormal14" description="Blog Description font, EB Garamond" type="font" default="400 14px EB Garamond, serif" hideEditor="true"  value="400 14px EB Garamond, serif"/>
+29
+<Variable name="ebGaramondNormal24" description="EB Garamond Normal 24" type="font" default="400 24px EB Garamond, serif" hideEditor="true"  value="400 24px EB Garamond, serif"/>
+30
+<Variable name="ebGaramondNormal44" description="Title font (eg: regular post title), EB Garamond" type="font" default="400 44px EB Garamond, serif" hideEditor="true"  value="400 44px EB Garamond, serif"/>
+31
+<Variable name="ebGaramondNormal48" description="EB Garamond Normal 48" type="font" default="400 48px EB Garamond, sans-serif" hideEditor="true"  value="400 48px EB Garamond, sans-serif"/>
+32
+<Variable name="ebGaramondSemiboldItalic44" description="Blockquote font, EB Garamond" type="font" default="italic 600 44px EB Garamond, serif" hideEditor="true"  value="italic 600 44px EB Garamond, serif"/>
+33
+<Variable name="latoNormal14" description="Lato Normal 14" type="font" default="400 14px Lato, sans-serif" hideEditor="true"  value="400 14px Lato, sans-serif"/>
+34
+<Variable name="latoNormal16" description="Lato Normal 16" type="font" default="400 16px Lato, sans-serif" hideEditor="true"  value="400 16px Lato, sans-serif"/>
+35
+<Variable name="latoNormal20" description="Lato Normal 20" type="font" default="400 20px Lato, sans-serif" hideEditor="true"  value="400 20px Lato, sans-serif"/>
+36
+<Variable name="latoBold14" description="Lato Bold 14" type="font" default="700 14px Lato, sans-serif" hideEditor="true"  value="700 14px Lato, sans-serif"/>
+37
+<Variable name="latoBold16" description="Lato Bold 16" type="font" default="700 16px Lato, sans-serif" hideEditor="true"  value="700 16px Lato, sans-serif"/>
+38
+<Variable name="latoBold24" description="Lato Bold 24" type="font" default="700 24px Lato, sans-serif" hideEditor="true"  value="700 24px Lato, sans-serif"/>
+39
+<Variable name="latoBold36" description="Lato Bold 36" type="font" default="700 36px Lato, sans-serif" hideEditor="true"  value="700 36px Lato, sans-serif"/>
+40
+<Variable name="latoBold48" description="Lato Bold 48" type="font" default="700 48px Lato, sans-serif" hideEditor="true"  value="700 48px Lato, sans-serif"/>
+41
+<Variable name="latoBoldItalic36" description="Lato Bold italic 36" type="font" default="italic 700 36px Lato, sans-serif" hideEditor="true"  value="italic 700 36px Lato, sans-serif"/>
+Template: Edit Template
